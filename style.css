@@ -1,0 +1,72 @@
+* {
+    font-family: "vasir";
+}
+.main {
+    width: 75vw;
+    margin: 3rem auto;
+}
+.main .head {
+    font-size: 1.7rem;
+    font-family: "vasir-bold";
+    margin-bottom: 2rem;
+    color: brown;
+}
+.main form input:not(#two) {
+    width: 100%;
+    display: block;
+    font-size: .7rem;
+    margin-top: .6rem;
+    padding: .7rem;
+}
+.main form .checkbox {
+    position: relative;
+    padding: 0 2.5rem 0 0;
+}
+.main form #two {
+    display: none;
+}
+.main form .checkbox .checkmarke {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 25px;
+    height: 25px;
+    background-color: #eee;
+}
+.main form .checkbox:hover .checkmarke {
+    background-color: #ccc;
+}
+.main form .checkbox .checked:checked ~ .checkmarke {
+    background-color: #0700e0;
+}
+.checkmarke::after {
+    content: "";
+    position: absolute;
+    display: none;
+    top: 3.7px;
+    right: 8.5px;
+    width: 5px;
+    height: 10px;
+    border: 3px solid #fff;
+    border-width: 0 3px 3px 0;
+    transform: rotate(45deg);
+}
+.main form .checkbox .checked:checked ~ .checkmarke::after {
+    content: "";
+    display: block;
+}
+
+.main form input::placeholder {
+    color: red;
+    font-size: .8rem;
+}
+.main form label {
+    font-size: 1.4rem;
+    margin-top: 1.2rem;
+    display: inline-block;
+    font-family: "vasir-bold";
+}
+.main form button {
+    margin-top: 1.2rem;
+    display: block;
+}
